@@ -1,0 +1,34 @@
+<div class="row buttons">
+  <div class="col">
+    <button [routerLink]="['/create-customer']" class="btn btn-primary">Create New Customer</button>
+  </div>
+</div>
+
+<div class="row customer-list">
+  <div class="col">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">Customer ID</th>
+          <th scope="col">Customer Name</th>
+          <th scope="col">Birthday</th>
+          <th scope="col">Gender</th>
+          <th scope="col">LastContact</th>
+          <th scope="col">Lifetime Value</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of customers">
+          <th scope="row">{{ customer.customerID }}</th>
+          <td>{{ customer.name.first }} {{ customer.name.last }}</td>
+          <td>{{ customer.birthday | date:'longDate' }}</td>
+          <td>{{ customer.gender }}</td>
+          <td>{{ customer.lastContact | date:'medium' }}</td>
+          <td>{{ customer.customerLifetimeValue }}</td>
+          <td><a [routerLink]="['/customers', customer.customerID]">Edit</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

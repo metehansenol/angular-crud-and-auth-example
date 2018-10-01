@@ -1,0 +1,67 @@
+<fieldset>
+  <legend>New Customer Details</legend>
+  <form #form="ngForm" role="form" novalidate>
+    <div class="row customer-details">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="firstNameInput">First Name</label>
+              <input type="text" [(ngModel)]="firstName" id="firstNameInput" name="firstNameInput" class="form-control" required>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="lastNameInput">Last Name</label>
+              <input type="text" [(ngModel)]="lastName" id="lastNameInput" name="lastNameInput" class="form-control" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="birthdayInput">Birthday</label>
+              <input type="text" [(ngModel)]="birthday" id="birthdayInput" name="birthdayInput" class="form-control" required>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="genderSelect">Gender</label>
+              <select [(ngModel)]="gender" id="genderSelect" name="genderSelect" class="form-control" required>
+                <option value="m">Man</option>
+                <option value="w">Women</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="lastContactInput">Last Contact</label>
+              <input type="text" [(ngModel)]="lastContact" id="lastContactInput" name="lastContactInput" class="form-control" required>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="lifeTimeInput">Lifetime Value</label>
+              <input type="text" [(ngModel)]="lifetimeValue" id="lifeTimeInput" name="lifeTimeInput" class="form-control" required>
+            </div>
+          </div>
+        </div>
+        <div class="row buttons">
+          <div class="col">
+            <button (click)="create()" [disabled]="!form.valid" class="btn btn-primary">Create</button>
+            <button routerLink="/" class="btn btn-default">Cancel</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="alert alert-danger errmsg" role="alert" *ngIf="hasError">
+              {{ errorMessage }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</fieldset>
