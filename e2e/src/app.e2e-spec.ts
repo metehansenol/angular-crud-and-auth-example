@@ -7,8 +7,8 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display app navbar', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to webtrekk-js-developer-challenge!');
+    expect(page.getAppNavbarTitle()).toEqual('Webtrekk JS Developer Challenge');
   });
 });
