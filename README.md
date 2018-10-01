@@ -1,5 +1,11 @@
 # Webtrekk Javascript Developer Challenge
 
+App deployed to heroku: [https://webtrekk-js-coding-task-deploy.herokuapp.com](https://webtrekk-js-coding-task-deploy.herokuapp.com)
+
+The app will automatically deploy to heroku if you push anything to master branch.
+
+## Angular CLI
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
 To install the Angular CLI globally: Run `npm install -g @angular/cli`
