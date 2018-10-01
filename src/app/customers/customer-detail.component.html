@@ -50,9 +50,9 @@
         </div>
         <div class="row buttons">
           <div class="col">
-            <button (click)="save()" [disabled]="!form.valid" class="btn btn-primary">Save</button>
-            <button (click)="delete()" class="btn btn-danger">Delete</button>
-            <button routerLink="/" class="btn btn-default">Cancel</button>
+            <button type="button" (click)="save()" [disabled]="!form.valid" class="btn btn-primary">Save</button>
+            <button type="button" (click)="delete()" class="btn btn-danger">Delete</button>
+            <button type="button" routerLink="/" class="btn btn-default">Cancel</button>
           </div>
         </div>
         <div class="row">
