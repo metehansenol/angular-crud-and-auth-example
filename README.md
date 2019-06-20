@@ -1,6 +1,6 @@
-# Webtrekk Javascript Developer Challenge
+# An example app that shows Crud and Auth operations in Angular
 
-App deployed to heroku: [https://webtrekk-js-coding-task-deploy.herokuapp.com](https://webtrekk-js-coding-task-deploy.herokuapp.com)
+App deployed to heroku: [https://angular-crud-and-auth-example.herokuapp.com](https://angular-crud-and-auth-example.herokuapp.com)
 
 The app will automatically deploy to heroku if you push anything to master branch.
 
